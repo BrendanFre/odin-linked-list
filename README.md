@@ -18,4 +18,4 @@ A Javascript function to search linked lists.
 
 ## Extra credit
 - [X] insertAt(value, index) that inserts a new node with the provided value at the given index.
-- [ ] removeAt(index) that removes the node at the given index.
+- [X] removeAt(index) that removes the node at the given index.
