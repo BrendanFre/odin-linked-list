@@ -1,3 +1,5 @@
+import Append from "./methods/Append.mjs";
+
 const node = (newValue = null, next = null) => {
     const value = newValue;
     const nextNode = next;
@@ -10,12 +12,15 @@ const linkedList = (firstValue) => {
     const toConsole = (list = start) => {
         console.log(list);
     }
+    // const append = (value, list = start) => {
+    //     if (list.value == null) {
+    //         list.value = value
+    //     } else if (list.nextNode == null) {
+    //         list.nextNode = node(value)
+    //     } else append(value, list.nextNode)
+    // }
     const append = (value, list = start) => {
-        if (list.value == null) {
-            list.value = value
-        } else if (list.nextNode == null) {
-            list.nextNode = node(value)
-        } else append(value, list.nextNode)
+        Append(value, list)
     }
 
     const prePend = (value) => {
@@ -81,7 +86,7 @@ const linkedList = (firstValue) => {
     const toString = (currentNode = start, theString = '') => {
         if (currentNode.nextNode == null) {
             theString = currentNode.value
-            return `(${theString})`
+            return `${theString}`
         } else {
             return `(${currentNode.value}) -> ${toString(currentNode.nextNode, currentNode.value)}`
         }
