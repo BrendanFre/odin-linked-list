@@ -42,3 +42,6 @@ catList.insertAt('Sylvester', 0)
 
 console.log(catList.toString());
 
+catList.removeAt(3)
+
+console.log(catList.toString());

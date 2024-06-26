@@ -9,6 +9,7 @@ import Prepend from "./Prepend.mjs";
 import Size from "./Size.mjs";
 import Tail from "./Tail.mjs";
 import ToString from "./ToString.mjs";
+import { RemoveAt } from "./RemoveAt.mjs";
 
 const LinkedList = (firstValue) => {
     let start = Node(firstValue)
@@ -58,7 +59,11 @@ const LinkedList = (firstValue) => {
     const insertAt = (value, index, list = start) => {
         InsertAt(value, index, list)
     }
-    return { start, insertAt, append, prepend, size, head, toConsole, tail, at, pop, contains, find, toString }
+
+    const removeAt = (index, list = start) => {
+        RemoveAt(index, list)
+    }
+    return { start, removeAt, insertAt, append, prepend, size, head, toConsole, tail, at, pop, contains, find, toString }
 }
 
 export default LinkedList
