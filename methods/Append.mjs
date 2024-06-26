@@ -1,10 +1,10 @@
-import node from './Node.mjs';
+import Node from './Node.mjs';
 
 const Append = (value, list) => {
     if (list.value == null) {
         list.value = value
     } else if (list.nextNode == null) {
-        list.nextNode = node(value)
+        list.nextNode = Node(value)
     } else Append(value, list.nextNode)
 }
 
